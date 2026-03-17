@@ -10,6 +10,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use('/api/auth', require('./routes/authRoutes')) // Authentication Routes Linked
 
 app.get('/api/status', (req, res) => {
   res.json({ message: "Pokemon Draft League Backend is alive!" });
